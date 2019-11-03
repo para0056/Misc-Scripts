@@ -1,3 +1,4 @@
+
 version: "2"
 services:
         jackett:
@@ -39,4 +40,15 @@ services:
                         - /mnt/Media/:/mnt/Media
                 ports:
                         - 7878:7878
+                restart: unless-stopped
+
+        cyberchef:
+                image: mpepping/cyberchef
+                container_name: cyberchef
+                environment:
+                        - PUID=1000
+                        - GUID=1000
+                        - TZ=America/New_York
+                ports:
+                        - 8000:8000
                 restart: unless-stopped
