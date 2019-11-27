@@ -4,10 +4,14 @@
 sudo apt-get update -y
 
 # Install Desktop Enviornment 
-sudo tasksel install ubuntu-mate-core
-tasksel --list-task
-sudo apt-get install tasksel -y
-sudo tasksel install ubuntu-mate-core
+# Tasksel
+#sudo tasksel install ubuntu-mate-core
+#tasksel --list-task
+#sudo apt-get install tasksel -y
+#sudo tasksel install ubuntu-mate-core
+
+# Install xubuntu desktop environment
+sudo apt-get install xubuntu-desktop
 sudo service lightdm start
 
 # Install XRDP
