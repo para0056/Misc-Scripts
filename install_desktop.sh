@@ -7,15 +7,15 @@ sudo apt-get update -y
 # Tasksel
 #sudo tasksel install ubuntu-mate-core
 #tasksel --list-task
-#sudo apt-get install tasksel -y
+#sudo apt-get install -y tasksel
 #sudo tasksel install ubuntu-mate-core
 
 # Install xubuntu desktop environment
-sudo apt-get install xubuntu-desktop
+sudo apt-get install -y xubuntu-desktop
 sudo service lightdm start
 
 # Install XRDP
-sudo apt-get -y install -y xrdp
+sudo apt-get install -y xrdp
 
 #* Disable newcursors because black background around cursor is displayed if using Xorg as session type.
 sed -e 's/^new_cursors=true/new_cursors=false/g' -i /etc/xrdp/xrdp.ini
