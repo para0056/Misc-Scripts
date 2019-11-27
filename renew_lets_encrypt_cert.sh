@@ -1,8 +1,8 @@
 #!/bin/bash
 #Put this script in /home/renew_lets_encrypt_cert.sh
 # Setup your Domain und E-Mail
-domain="unifi.casanaley.net"
-email="nick@nparadis.ca"
+domain="#Domain"
+email="#Domain"
 
 # Stop the services
 service nginx stop
