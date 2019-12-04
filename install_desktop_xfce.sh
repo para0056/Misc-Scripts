@@ -19,7 +19,7 @@ systemctl restart xrdp
 
 # Install xubuntu desktop and automate selection of display manager
 apt install -y expect
-$ cat <<EOF | expect
+cat <<EOF | expect
 set timeout -1
 spawn sudo apt install -y xubuntu-desktop
 expect "Default display manager: "
