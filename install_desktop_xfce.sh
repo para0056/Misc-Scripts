@@ -27,4 +27,6 @@ send "lightdm\n"
 expect eof
 EOF
 
+apt-get update -y
+apt-get upgrade -y
 #sudo systemctl restart polkit
