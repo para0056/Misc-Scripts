@@ -17,10 +17,7 @@ apt-get install -y xrdp
 sed -e 's/^new_cursors=true/new_cursors=false/g' -i /etc/xrdp/xrdp.ini
 systemctl restart xrdp
 
-# Install xubuntu desktop
-sudo apt install -y xubuntu-desktop
-
-# Automate selection of display manager
+# Install xubuntu desktop and automate selection of display manager
 apt install -y expect
 $ cat <<EOF | expect
 set timeout -1
@@ -30,4 +27,4 @@ send "lightdm\n"
 expect eof
 EOF
 
-sudo systemctl restart polkit
+#sudo systemctl restart polkit
