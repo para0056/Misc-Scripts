@@ -8,7 +8,7 @@
 # ===================================================================
 
 # Update package list
-apt-get update
+apt-get update -y
 
 # Install XRDP
 apt-get install -y xrdp
@@ -17,21 +17,14 @@ apt-get install -y xrdp
 sed -e 's/^new_cursors=true/new_cursors=false/g' -i /etc/xrdp/xrdp.ini
 systemctl restart xrdp
 
+# Install tasksel and use to install XFCE
 apt-get install -y tasksel
 tasksel install xubuntu-desktop
+
+# Start the lightdm display manager
 service lightdm start
 
-# Install xubuntu desktop and automate selection of display manager
-#apt install -y expect
-#cat <<EOF | expect
-#set timeout -1
-#spawn sudo apt install -y xubuntu-desktop
-#expect "Default display manager: "
-#send "lightdm\n"
-#expect eof
-#EOF
-
+# One less update and reboot
 apt-get update -y
 apt-get upgrade -y
-#sudo systemctl restart polkit
 reboot
