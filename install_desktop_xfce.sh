@@ -8,23 +8,21 @@
 # ===================================================================
 
 # Update package list
-apt-get update -y
+sudo apt-get update -y
 
 # Install XRDP
-apt-get install -y xrdp
+sudo apt-get install -y xrdp
 
 # Disable newcursors because black background around cursor is displayed if using Xorg as session type.
-sed -e 's/^new_cursors=true/new_cursors=false/g' -i /etc/xrdp/xrdp.ini
-systemctl restart xrdp
+sudo sed -e 's/^new_cursors=true/new_cursors=false/g' -i /etc/xrdp/xrdp.ini
+sudo systemctl restart xrdp
 
 # Install tasksel and use to install XFCE
-apt-get install -y tasksel
-tasksel install xubuntu-desktop
+sudo apt-get install -y tasksel
+sudo tasksel install xubuntu-desktop
 
 # Start the lightdm display manager
-service lightdm start
+sudo service lightdm start
 
-# One less update and reboot
-apt-get update -y
-apt-get upgrade -y
+# One last reboot
 reboot
