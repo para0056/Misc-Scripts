@@ -18,7 +18,7 @@ sed -e 's/^new_cursors=true/new_cursors=false/g' -i /etc/xrdp/xrdp.ini
 systemctl restart xrdp
 
 apt-get install -y tasksel
-tasksel install xfce4 slim
+tasksel install xubuntu-desktop
 service lightdm start
 
 # Install xubuntu desktop and automate selection of display manager
