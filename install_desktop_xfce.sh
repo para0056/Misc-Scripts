@@ -23,8 +23,3 @@ tasksel install xubuntu-desktop
 
 # Start the lightdm display manager
 service lightdm start
-
-# One last update then reboot
-apt-get update -y
-apt-get upgrade -y
-reboot
